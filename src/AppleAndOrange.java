@@ -12,12 +12,14 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 
-class Result {
+
+
+public class AppleAndOrange {
+
     public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
 
         int applesOnHouse = 0;
         int orangesOnHouse = 0;
-
 
         for (int i = 0; i < apples.size(); i++) {
             int distance = a + apples.get(i);
@@ -38,9 +40,6 @@ class Result {
 
     }
 
-}
-
-public class AppleAndOrange {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -70,7 +69,7 @@ public class AppleAndOrange {
                 .map(Integer::parseInt)
                 .collect(toList());
 
-        Result.countApplesAndOranges(s, t, a, b, apples, oranges);
+        countApplesAndOranges(s, t, a, b, apples, oranges);
 
         bufferedReader.close();
     }
